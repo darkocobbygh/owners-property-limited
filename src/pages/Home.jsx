@@ -11,19 +11,18 @@ const Home = () => {
   <div className="home-container">
     <div className="hero">
       <div className="hero-title">
-        <h4 className="underlined">Owners Property Limited</h4>
+        <h4 className="underlined">Owners Properties Limited</h4>
       </div>
       <div className="hero-description">
         <h1>Let us help you find your dream home.</h1>
       </div>
       <div className="button-container">
-        <button className="custom-button"><Link to="buy-a-home">Buy a Home</Link></button> 
-        <button className="custom-button"><Link to="list-a-home">List a Home</Link></button>
+        <button ><Link className="custom-button" to="buy-a-home">Buy a Home</Link></button> 
+        <button ><Link className="custom-button" to="list-a-home">List a Home</Link></button>
       </div>
       <span>
-        <h4>Our vision is to be the most trusted and respected Real Estate Agency in Ghana</h4>
-        <Link to='contact-us'>Contact us</Link>
-      </span>
+        <h4 style={{paddingTop: '15px'}}>Our vision is to be the most trusted <br /> and respected Real Estate Agency in Ghana</h4>
+        </span>
     </div>
   </div>
 </section>

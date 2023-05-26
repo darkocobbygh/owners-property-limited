@@ -1,21 +1,54 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React,{useState} from 'react'
+import {Button} from './Button'
+import {Link} from 'react-router-dom'
+import './Navbar.css'
+import Owl from '../images/owl.png'
 
-const Navbar = () => {
-  return (
-    <section className="h-wrapper">
-    <div className='flexCenter paddings innerWidth h-container'>
-    <img src=''alt='' />
-    <div className="flexCenter nav-igate">
-        <Link to=''>Home</Link>
-        <Link to='services'>Services</Link>
-        <Link to='about-us'>About us</Link>
-        <Link to='contact-us'>Contact us</Link>
-    </div>
-    </div>
-    </section>
-  )
+
+
+function Navbar() {
+    const [click,setClick] = useState(false);
+
+    
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu=()=>setClick(false);
+
+    return(
+        <>
+            <nav className="navbar">
+                <Link to='/' className='navbar-logo'>
+                  <img src={Owl} alt="" className='ow' />
+                </Link>
+                <div className='menu-icon' onClick={handleClick}>
+                    <i className={click ? 'fas fa-times': 'fas fa-bars'} />
+                </div>
+                <ul className={click? 'nav-menu active' : 'nav-menu'}>
+                    <li className='nav-item'>
+                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/services' className='nav-links'>
+                            Services <i className='fas fa-caret-down' />
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        
+                        <Link to='/about-us' className='nav-links'>
+                            About Us
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                         <Link to='/contact-us' className='nav-links'>
+                            Contact Us
+                        </Link>
+                    </li>
+                </ul>
+                <Button />
+            </nav>
+        </>
+    )
 }
 
-export default Navbar
+export default Navbar;

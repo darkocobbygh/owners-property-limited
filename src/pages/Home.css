@@ -24,21 +24,23 @@
   .hero-description {
     margin-bottom: 10px;
   }
-  
   .custom-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #4a90e2;
     color: #fff;
+    text-decoration: none;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 2rem;
   }
   
   .custom-button:hover {
-    background-color: #3b7bdb;
+    background-color: red;
+    color: #fff;
   }
   
   .button-container {
@@ -49,7 +51,7 @@
     margin-left: 10px;
   }
   .underlined {
-    text-decoration: underline;
+    font-size: 4rem;
   }
   
   

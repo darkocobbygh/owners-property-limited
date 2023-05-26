@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-
+import {FaPhoneSquare,FaHome, FaMailBulk} from 'react-icons/fa'
 const Contact = () => {
   const contact_details = [
     {
@@ -23,10 +23,13 @@ const Contact = () => {
           <div key={contact.email_address}>
             <h6>{contact.littleInfo}</h6>
             <h4>{contact.lil}</h4>
+            <FaHome color='red' size='2rem'></FaHome>
             <p>Location: {contact.address}</p>
+            <FaPhoneSquare color='red' size={'2rem'}/>
             <p>Phone number: {contact.phone}</p>
             <p>{contact.phone_one}</p>
             <p>{contact.phone_two}</p>
+            <FaMailBulk color='red' size={'2rem'}/>
             <p>Email address: {contact.email_address}</p>
           </div>
         ))}
